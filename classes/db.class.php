@@ -87,19 +87,15 @@ class DB
   public function DatabaseConnect() 
 	{
     $this->conn_id = mysql_connect($this->sqlHost, $this->sqlUser, $this->sqlPassword, 1);
+    mysql_set_charset('utf8');
     mysql_select_db($this->sqlDatabase, $this->conn_id) or die("<br/>".mysql_error()."<br/>");
-		mysql_query("SET NAMES utf8;");
-		mysql_query("SET CHARACTER SET utf8;");
   }
 	
 	public function ExecuteQuery()
 	{
   	if(!$this->conn_id)
    	  $this->DatabaseConnect();
-			
-
 		//TODO we might want to add some security in the queries here, but that can be done later, this is the place
-
 		if($this->projectStatus == "test")
 		{
 				//echo "<br><br>".$this->query."<br><br>";
