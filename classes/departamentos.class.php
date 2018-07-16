@@ -57,6 +57,9 @@ class Departamentos extends Main
         $perms = $this->Util()->DB()->GetResult();
         $perm = $this->Util()->ConvertToLineal($perms,'permisoId');
 
+        if(empty($perm))s
+           array_push($perm,0);
+
         $filtro=' WHERE  a.permisoId IN ('.implode(',',$perm).') ';
 
         if($User['tipoPers']!="Admin")
