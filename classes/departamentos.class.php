@@ -57,7 +57,7 @@ class Departamentos extends Main
         $perms = $this->Util()->DB()->GetResult();
         $perm = $this->Util()->ConvertToLineal($perms,'permisoId');
 
-        if(empty($perm))s
+        if(empty($perm))
            array_push($perm,0);
 
         $filtro=' WHERE  a.permisoId IN ('.implode(',',$perm).') ';
