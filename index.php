@@ -22,7 +22,7 @@ include_once(DOC_ROOT.'/libraries.php');
 		break;
 	}*/
 	$User['tipoPersonal'] = $infoUser['tipoPersonal'];
-	$_SESSION['empresaId'] = 15;
+	$_SESSION['empresaId'] = IDEMPRESA;
 	$pages = array(
 		'login',
 		'logout',

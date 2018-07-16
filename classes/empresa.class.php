@@ -157,7 +157,7 @@ class Empresa extends Main
 
 	public function setEmpresaId($value, $checkIfExists = 0)
 	{
-		$this->empresaId = 15;
+		$this->empresaId = $value;
 	}
 
 	public function getEmpresaId()

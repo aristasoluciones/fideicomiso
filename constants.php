@@ -35,11 +35,11 @@ switch($_SERVER['HTTP_HOST'])
         define("FROM_MAILAlERTA", "noreply@noreply.com");
     break;
     default:
-        define("SEND_TO", "asanchez@braunhuerin.com.mx");
-        define("SEND_TO1", "cobranza1@braunhuerin.com.mx ");
-        define("SEND_TO2", "cobranza2@braunhuerin.com.mx ");
-        define("SEND_TO3", "cobranza3@braunhuerin.com.mx");
-        define("FROM_MAIL", "facturacion@braunhuerin.com.mx");
+        define("SEND_TO", "asanchez222@braunhuerin.com.mx");
+        define("SEND_TO1", "cobranza1222@braunhuerin.com.mx ");
+        define("SEND_TO2", "cobranza2333@braunhuerin.com.mx ");
+        define("SEND_TO3", "cobranza34444@braunhuerin.com.mx");
+        define("FROM_MAIL", "facturacion4444@braunhuerin.com.mx");
         define("FROM_MAILAlERTA", "noreply@noreply.com");
     break;
 }
