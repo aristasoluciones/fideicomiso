@@ -130,7 +130,7 @@ switch($_POST["type"])
         break;
 
     case "generarComprobante":
-       dd($_POST);exit;
+        dd($_POST["nuevaFactura"]);exit;
         $data["datosFacturacion"] = $_POST["nuevaFactura"];
         $data["observaciones"] = $_POST["observaciones"];
 
