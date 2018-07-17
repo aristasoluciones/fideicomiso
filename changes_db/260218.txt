@@ -1,2 +1,0 @@
-ALTER TABLE `tipoServicio`
-	ADD COLUMN `status` ENUM('0','1') NOT NULL DEFAULT '1' AFTER `mostrarCostoVisual`;

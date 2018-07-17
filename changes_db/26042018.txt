@@ -1,2 +1,0 @@
-ALTER TABLE `documento`
-	ADD COLUMN `dateExpiration` DATE NULL DEFAULT NULL AFTER `tipoDocumentoId`;
