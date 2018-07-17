@@ -328,7 +328,6 @@ function GenerarComprobante(format)
     }
 
     $('showFactura').innerHTML = '<div align="center"><img src="'+WEB_ROOT+'/images/load.gif" /><br>Generando Comprobante, este proceso puede tardar unos segundos</div>';
-    console.log('pppp '+encodeURIComponent($('nuevaFactura').serialize()));
     $('nuevaFactura').enable();
     var nuevaFactura = encodeURIComponent($('nuevaFactura').serialize());
     $('nuevaFactura').disable();
@@ -400,7 +399,7 @@ function GenerarComprobante(format)
 
     if($('referencia')) var referencia = $('referencia').value;
     else var referencia = 0;
-
+    console.log('pppp '+encodeURIComponent(nuevaFactura));
     new Ajax.Request(WEB_ROOT+'/ajax/cfdi33.php',
         {
             parameters: {
