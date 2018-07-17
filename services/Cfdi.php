@@ -212,7 +212,6 @@ class Cfdi extends Comprobante
         } else {
             unset($_SESSION['amortizacion']);
         }
-        dd($data);exit;
         include_once(DOC_ROOT.'/services/Xml.php');
         $xml = new Xml($data);
 
