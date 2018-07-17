@@ -282,7 +282,7 @@
 		$nom_certificado = 'No hay certificados.';
 	else{
 	
-		$sqlQuery = 'UPDATE serie SET noCertificado = "'.$certNuevo.'" WHERE noCertificado = "'.$certAnterior.'"';
+		$sqlQuery = 'UPDATE serie SET noCertificado = "'.$certNuevo.'" WHERE (noCertificado = "'.$certAnterior.'" OR empresaId="'.$rfc->getRfcActive().'")';
 		$folios->Util()->DBSelect($_SESSION["empresaId"])->setQuery($sqlQuery);
 		$folios->Util()->DBSelect($_SESSION["empresaId"])->UpdateData();
 		
