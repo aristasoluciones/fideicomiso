@@ -137,6 +137,7 @@ class SendMail extends Main
     {
         //crear un objeto mail por cada correo
         $mail = new PHPMailer(); // defaults to using php "mail()"
+        $mail->CharSet = 'UTF-8';
         $mail->AddReplyTo($from, $fromName);
         $mail->SetFrom($from, $fromName);
         $mail->Subject    = $subject;

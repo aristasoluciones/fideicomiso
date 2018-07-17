@@ -502,7 +502,7 @@ class Log extends Util
 	    if(!$field)
 	        $field ="Campo indefinido";
 
-        return utf8_decode($field);
+        return $field;
     }
     function PrintInFormatText($changes,$tipo='complete'){
 	    $html="";
@@ -525,9 +525,9 @@ class Log extends Util
                 foreach($changes['after'] as $ck=>$vc){
                     $html .="<tr>
                                     <td style='padding:0px 8px 4px 0px;text-align: left;border-bottom:1px solid;'>".$changes['before'][$ck]['campo'].": </td>
-                                    <td style='padding:0px 8px 4px 0px;text-align: left;border-right:1px solid;border-bottom:1px solid'>".utf8_decode($changes['before'][$ck]['valor'])."</td>
+                                    <td style='padding:0px 8px 4px 0px;text-align: left;border-right:1px solid;border-bottom:1px solid'>".($changes['before'][$ck]['valor'])."</td>
                                     <td style='padding:0px 8px 4px 0px;text-align: left;border-bottom:1px solid'>".$vc['campo'].": </td>
-                                    <td style='padding:0px 8px 4px 0px;text-align: left;border-bottom:1px solid'>".utf8_decode($vc['valor'])."</td>
+                                    <td style='padding:0px 8px 4px 0px;text-align: left;border-bottom:1px solid'>".$vc['valor']."</td>
                                 </tr>";
                 }
                 $html .="</tbody></table><br>";
@@ -545,7 +545,7 @@ class Log extends Util
                     foreach ($changes as $ck => $vc) {
                         $html .= "<tr>
                                     <td style='padding:0px 8px 4px 0px;text-align: left;border-right:1px solid;border-bottom: 1px solid'>" . $changes[$ck]['campo'] . ": </td>
-                                    <td style='padding:0px 8px 4px 0px;text-align: left;border-bottom: 1px solid'>" . utf8_decode($changes[$ck]['valor']) . "</td>                                 
+                                    <td style='padding:0px 8px 4px 0px;text-align: left;border-bottom: 1px solid'>" . $changes[$ck]['valor'] . "</td>                                 
                                 </tr>";
                     }
                     $html .= "</tbody></table>";
