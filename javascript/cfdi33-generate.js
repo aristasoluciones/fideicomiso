@@ -328,9 +328,9 @@ function GenerarComprobante(format)
     }
 
     $('showFactura').innerHTML = '<div align="center"><img src="'+WEB_ROOT+'/images/load.gif" /><br>Generando Comprobante, este proceso puede tardar unos segundos</div>';
-
+    console.log('pppp '+encodeURIComponent($('nuevaFactura').serialize()));
     $('nuevaFactura').enable();
-    var nuevaFactura = $('nuevaFactura').serialize();
+    var nuevaFactura = encodeURIComponent($('nuevaFactura').serialize());
     $('nuevaFactura').disable();
     $('rfc').enable();
     $('userId').enable();
