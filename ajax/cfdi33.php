@@ -166,7 +166,7 @@ switch($_POST["type"])
         {
             $array = explode("=", $values[$key]);
             if($array[0]=='razonSocial')
-                $data[$array[0]] = utf8_decode(utf8_encode($array[1]));
+                $data[$array[0]] = utf8_encode(utf8_decode($array[1]));
             else
                 $data[$array[0]] = $array[1];
 
