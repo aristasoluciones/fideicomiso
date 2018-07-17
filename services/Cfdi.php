@@ -18,11 +18,11 @@ class Cfdi extends Comprobante
         $data["tiposComprobanteId"] = $tipoSerie[0];
         $data["tiposSerieId"] = $tipoSerie[1];
 
-        if($data["tiposSerieId"] == "5" || $data["tiposSerieId"] == "55")
+        if($data["tiposSerieId"] == "1" || $data["tiposSerieId"] == "1")
         {
-            $empresaIdFacturador = 15;
-            $_SESSION['empresaId'] = 15;
-            $empresa['empresaId'] = 15;
+            $empresaIdFacturador = 1;
+            $_SESSION['empresaId'] = 1;
+            $empresa['empresaId'] = 1;
             $emisor = $emisorHuerin;
         }
         elseif($data["tiposSerieId"] == "51"|| $data["tiposSerieId"] == "54")
