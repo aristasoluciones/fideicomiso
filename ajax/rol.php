@@ -139,7 +139,7 @@ switch($_POST['type']){
             //crear una pestaña por cada rol
             $sheet = $book->createSheet($key);
             $sheet->setCellValue('A1','Permisos del rol '.$value['name']);
-            $sheet->setTitle($value['name']);
+            $sheet->setTitle(substr($value['name'],0,29));
 
             //iterar primer nivel
             $rol->setRolId($value['rolId']);
