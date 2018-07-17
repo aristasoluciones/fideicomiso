@@ -176,7 +176,8 @@ switch($_POST["type"])
                 $data[$array[0]] = $array[1];
 
         }
-
+        dd($data);
+        exit;
         $data["folioSobre"] = $_POST["folioSobre"];
 
         switch($data["fromAddenda"])
