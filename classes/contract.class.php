@@ -63,7 +63,20 @@ class Contract extends Main
   private $permisos;
   public function setPermisos($value, $firsValue)
   {
-    $this->permisos = "1,".$firsValue."-".implode("-", array_filter($value));
+      $per =  "";
+    //si tiene encargado de cont se concatena
+    if($firsValue){
+        $per .="1,".$firsValue;
+
+    }
+    //solo se concatena si tiene encargados de otra area
+    if(!empty($value)&&is_array($value)){
+        if($firsValue)
+            $per .="-";
+        $per .=implode("-", array_filter($value));
+    }
+    //igualar a permiso
+    $this->permisos = $per;
   }
 
   private $noExtComercial;
