@@ -399,7 +399,7 @@ function GenerarComprobante(format)
 
     if($('referencia')) var referencia = $('referencia').value;
     else var referencia = 0;
-    console.log('pppp '+encodeURIComponent(nuevaFactura));
+    console.log('pppp '+(nuevaFactura));
     new Ajax.Request(WEB_ROOT+'/ajax/cfdi33.php',
         {
             parameters: {
