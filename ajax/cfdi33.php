@@ -198,6 +198,7 @@ switch($_POST["type"])
             $data["uppDestino"] = $_POST["uppDestino"];
             $data["firmaVendedor"] = $_POST["firmaVendedor"];
         }
+        dd($data);exit;
         if(!$response = $cfdi->Generar($data))
         {
             echo "fail|";
