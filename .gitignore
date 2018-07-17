@@ -20,6 +20,7 @@ javascript/js-config.js
 /vendor
 cron/*.txt
 exportar.xlsx
+exportar.pdf
 cron-nuevo/*.txt
 cron-nuevo/templates_c
 cron/.facturas_log.txt.swp
