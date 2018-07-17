@@ -329,7 +329,7 @@ function GenerarComprobante(format)
 
     $('showFactura').innerHTML = '<div align="center"><img src="'+WEB_ROOT+'/images/load.gif" /><br>Generando Comprobante, este proceso puede tardar unos segundos</div>';
     $('nuevaFactura').enable();
-    var nuevaFactura = encodeURIComponent($('nuevaFactura').serialize());
+    var nuevaFactura = $('nuevaFactura').serialize();
     $('nuevaFactura').disable();
     $('rfc').enable();
     $('userId').enable();

@@ -165,15 +165,18 @@ switch($_POST["type"])
         foreach($values as $key => $val)
         {
             $array = explode("=", $values[$key]);
-            echo $array[0]."<br>";
             if($array[0]=='razonSocial'){
                 $data[$array[0]] = utf8_encode($array[1]);
-
+                echo utf8_encode(utf8_decode($array[1]))."<br>";
+                echo utf8_decode(utf8_encode($array[1]))."<br>";
+                echo utf8_decode($array[1])."<br>";
+                echo $array[1]."<br>";
             }
             else
                 $data[$array[0]] = $array[1];
 
         }
+        dd($data);
         exit;
         $data["folioSobre"] = $_POST["folioSobre"];
 
