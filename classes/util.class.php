@@ -1457,6 +1457,10 @@ function HandleMultipages($page,$total,$link,$items_per_page=0,$pagevar="p"){
         else
             return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
     }
+    function Codification($string) {
+        return mb_detect_encoding($string.'x', 'UTF-8, ISO-8859-1');
+    }
+
 
 }
 
