@@ -130,7 +130,7 @@ switch($_POST["type"])
         break;
 
     case "generarComprobante":
-        $data["datosFacturacion"] = utf8_decode($_POST["nuevaFactura"]);
+        $data["datosFacturacion"] = $_POST["nuevaFactura"];
         $data["observaciones"] = $_POST["observaciones"];
 
         $data["reviso"] = $_POST["reviso"];
@@ -165,10 +165,10 @@ switch($_POST["type"])
         foreach($values as $key => $val)
         {
             $array = explode("=", $values[$key]);
-            $data[$array[0]] = ($util->Codification($array[1])=='UTF-8') ? utf8_decode($array[1]):$array[1];
+            $data[$array[0]] = $array[1];
+
         }
-        dd($data);
-        exit;
+
         $data["folioSobre"] = $_POST["folioSobre"];
 
         switch($data["fromAddenda"])
