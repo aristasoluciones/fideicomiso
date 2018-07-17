@@ -165,9 +165,7 @@ switch($_POST["type"])
         foreach($values as $key => $val)
         {
             $array = explode("=", $values[$key]);
-
-                $data[$array[0]] = utf8_decode(htmlspecialchars($array[1]));
-            
+            $data[$array[0]] = $array[1];
         }
 
         $data["folioSobre"] = $_POST["folioSobre"];
@@ -197,7 +195,6 @@ switch($_POST["type"])
             $data["uppDestino"] = $_POST["uppDestino"];
             $data["firmaVendedor"] = $_POST["firmaVendedor"];
         }
-        dd($data);exit;
         if(!$response = $cfdi->Generar($data))
         {
             echo "fail|";
