@@ -2162,6 +2162,7 @@ class Contract extends Main
       //exit;*/
 
         $fp = fopen(DOC_ROOT.'/contracts.log','a');
+        chmod(DOC_ROOT.'/contracts.log', 0756);
 		fwrite($fp,"OLD DATA\n");
 		fwrite($fp,json_encode($oldData));
 		fwrite($fp,"\n\nNEW DATA\n");
